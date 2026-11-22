@@ -46,18 +46,23 @@ export function SiteHeader() {
             <img src="/assets/brand/oubyt-logo-transparent.webp" alt="" width="96" height="66" />
             <span>ANIMATION STUDIO</span>
           </Link>
-          <button
-            className={`menu-toggle${menuOpen ? ' is-open' : ''}`}
-            type="button"
-            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-expanded={menuOpen}
-            aria-controls="primary-navigation"
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </button>
+          <div className="header-controls">
+            <Link className="button button-small button-accent header-explore" href="/worlds" onClick={() => setMenuOpen(false)}>
+              Explore <span aria-hidden="true">↗</span>
+            </Link>
+            <button
+              className={`menu-toggle${menuOpen ? ' is-open' : ''}`}
+              type="button"
+              aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={menuOpen}
+              aria-controls="primary-navigation"
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </button>
+          </div>
           <nav id="primary-navigation" className={`primary-navigation${menuOpen ? ' is-open' : ''}`} aria-label="Main navigation">
             {navigation.map((item) => (
               <Link

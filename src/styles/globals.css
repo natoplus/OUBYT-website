@@ -216,6 +216,10 @@ textarea:focus-visible {
   color: var(--accent-bright);
 }
 
+.header-controls {
+  display: none;
+}
+
 .menu-toggle {
   display: none;
 }
@@ -1398,8 +1402,8 @@ textarea:focus-visible {
 }
 
 .footer-logo img {
-  width: 58px;
-  height: 40px;
+  width: 90px;
+  height: 62px;
 }
 
 .footer-socials {
@@ -1738,6 +1742,17 @@ textarea:focus-visible {
     display: none;
   }
 
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-explore {
+    min-height: 40px;
+    padding-inline: 14px;
+  }
+
   .menu-toggle {
     display: flex;
     width: 40px;
@@ -1994,6 +2009,11 @@ textarea:focus-visible {
 
   .footer-brand {
     grid-column: 1 / -1;
+  }
+
+  .footer-logo img {
+    width: 78px;
+    height: 54px;
   }
 
   .footer-bottom {
