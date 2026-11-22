@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <link rel="icon" href="/assets/brand/oubyt-logo.webp" type="image/webp" />
+        <link rel="icon" href="/assets/brand/oubyt-logo-transparent.webp" type="image/webp" />
         <title>Oubyt — Animation for original worlds</title>
         <meta name="description" content="Oubyt is the Nartstudio animation studio, shaping original worlds into visual stories in 2D and 3D." />
         <meta name="robots" content="index,follow" />
@@ -90,6 +90,35 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section story-pillars-section">
+          <div className="site-container">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">THE STORY LEADS</p>
+                <h2>Every frame has<br />a point of view.</h2>
+              </div>
+              <p className="section-intro">We look for the human detail inside the spectacle, then let that point of view guide the design, pace and performance.</p>
+            </div>
+            <div className="story-pillars">
+              <article className="story-pillar">
+                <span>01 / CHARACTER</span>
+                <h3>Someone to follow.</h3>
+                <p>Specific choices and readable performances make a character feel like they belong to the world.</p>
+              </article>
+              <article className="story-pillar">
+                <span>02 / ATMOSPHERE</span>
+                <h3>A place with a pulse.</h3>
+                <p>Shape, colour and sound cues can make an environment feel alive before it moves.</p>
+              </article>
+              <article className="story-pillar">
+                <span>03 / MOTION</span>
+                <h3>Movement with meaning.</h3>
+                <p>Timing and rhythm carry emotion, reveal personality and keep the story clear.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section className="section services-section" id="services">
           <div className="site-container">
             <div className="section-heading">
@@ -97,7 +126,10 @@ export default function HomePage() {
                 <p className="eyebrow">WHAT WE MAKE</p>
                 <h2>From the first sketch<br />to the final frame.</h2>
               </div>
-              <p className="section-intro">A thoughtful animation pipeline can begin at any stage. Tell us what you have, and we’ll help shape the next move.</p>
+              <div>
+                <p className="section-intro">A thoughtful animation pipeline can begin at any stage. Tell us what you have, and we’ll help shape the next move.</p>
+                <Link className="text-link section-heading-link" href="/services">Explore all services <span aria-hidden="true">↗</span></Link>
+              </div>
             </div>
             <div className="service-grid">
               {services.map((service) => (
@@ -113,6 +145,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="world-feature-section section">
+          <div className="site-container world-feature-layout">
+            <div className="page-feature-art">
+              <img src="/assets/worlds/the-unliving-sage.webp" alt="The Unliving Sage original dark-fantasy story-world artwork." width="1280" height="1920" loading="lazy" decoding="async" />
+              <span className="art-index">WORLD / 04</span>
+            </div>
+            <div className="world-feature-copy">
+              <p className="eyebrow">A WORLD WITH ITS OWN RULES</p>
+              <h2>Let the world<br />shape the frame.</h2>
+              <p className="body-copy">From neon-lit futures to dark fantasy, each NCU world carries a distinct atmosphere. We start by understanding those rules, then look for the visual language that lets the story move.</p>
+              <Link className="button button-outline" href="/worlds">Explore the story worlds <span aria-hidden="true">↗</span></Link>
+              <p className="artwork-note">Original story-world artwork shown; not finished animation or client work.</p>
+            </div>
+          </div>
+        </section>
+
         <section className="section worlds-section" id="worlds">
           <div className="site-container">
             <div className="section-heading worlds-heading">
@@ -120,7 +168,10 @@ export default function HomePage() {
                 <p className="eyebrow">ORIGINAL STORY WORLDS</p>
                 <h2>Distinct worlds.<br /><span>Room to move.</span></h2>
               </div>
-              <p className="section-intro">Oubyt belongs to a wider creative family. Explore some of the original NCU universes whose characters and settings give every story its own visual language.</p>
+              <div>
+                <p className="section-intro">Oubyt belongs to a wider creative family. Explore some of the original NCU universes whose characters and settings give every story its own visual language.</p>
+                <Link className="text-link section-heading-link" href="/worlds">See all worlds <span aria-hidden="true">↗</span></Link>
+              </div>
             </div>
             <div className="world-grid">
               {worlds.map((world) => (
@@ -149,7 +200,10 @@ export default function HomePage() {
                 <p className="eyebrow">HOW WE WORK</p>
                 <h2>Clear steps.<br />Considered craft.</h2>
               </div>
-              <p className="section-intro">A collaborative process keeps the creative direction clear and the production moving—with decisions made at the right time.</p>
+              <div>
+                <p className="section-intro">A collaborative process keeps the creative direction clear and the production moving—with decisions made at the right time.</p>
+                <Link className="text-link section-heading-link" href="/process">See how we work <span aria-hidden="true">↗</span></Link>
+              </div>
             </div>
             <div className="process-grid">
               {processSteps.map((step, index) => (
@@ -164,12 +218,29 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section studio-principles-section">
+          <div className="site-container">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">GOOD WORK, BUILT TOGETHER</p>
+                <h2>Creative clarity<br />at every stage.</h2>
+              </div>
+              <p className="section-intro">The process should protect the idea and make the next decision easier—not add distance between the people making it.</p>
+            </div>
+            <div className="studio-principles">
+              <article className="value-card"><span>01</span><h3>Keep the idea in view</h3><p>Creative choices stay connected to the story, audience and purpose set in the brief.</p></article>
+              <article className="value-card"><span>02</span><h3>Make feedback useful</h3><p>Clear milestones and agreed review points help teams respond to the work with focus.</p></article>
+              <article className="value-card"><span>03</span><h3>Finish with a handoff</h3><p>Delivery requirements are agreed early, so final files are prepared for their intended use.</p></article>
+            </div>
+          </div>
+        </section>
+
         <section className="studio-section section" id="studio">
           <div className="site-container studio-panel">
             <div className="studio-visual">
               <div className="studio-orbit studio-orbit-one" aria-hidden="true" />
               <div className="studio-orbit studio-orbit-two" aria-hidden="true" />
-              <span className="studio-monogram">O</span>
+              <img className="studio-logo-image" src="/assets/brand/oubyt-logo.webp" alt="Oubyt animation studio logo" width="1280" height="884" loading="lazy" decoding="async" />
               <span className="studio-coordinate">NARTSTUDIO<br />ANIMATION DIVISION</span>
             </div>
             <div className="studio-copy">
@@ -177,6 +248,7 @@ export default function HomePage() {
               <h2>Small enough to stay close to the story.</h2>
               <p className="body-copy">Oubyt is the animation studio within the Nartstudio family. We connect original story development with visual direction and animation—keeping the point of view intact as an idea moves toward the screen.</p>
               <div className="studio-links">
+                <Link className="text-link" href="/studio">Discover the studio <span aria-hidden="true">↗</span></Link>
                 <a className="text-link" href={NARTSTUDIO_URL} target="_blank" rel="noreferrer">Meet Nartstudio <span aria-hidden="true">↗</span></a>
                 <a className="text-link" href={`${NARTSTUDIO_URL}/brands/ncu`} target="_blank" rel="noreferrer">Discover NCU <span aria-hidden="true">↗</span></a>
               </div>

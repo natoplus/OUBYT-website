@@ -72,6 +72,16 @@ export const worlds = [
     href: `${NARTSTUDIO_URL}/universes/lords-lounge`,
     index: '03',
   },
+  {
+    name: 'The Unliving Sage',
+    genre: 'Dark fantasy',
+    summary: 'Forbidden necromantic arts reshape the meaning of death in this dark-fantasy world.',
+    image: '/assets/worlds/the-unliving-sage.webp',
+    width: 1280,
+    height: 1920,
+    href: `${NARTSTUDIO_URL}/universes/the-unliving-sage`,
+    index: '04',
+  },
 ]
 
 export const processSteps = [

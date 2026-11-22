@@ -11,7 +11,7 @@ export default function StartAProjectPage() {
   return (
     <>
       <Head>
-        <link rel="icon" href="/assets/brand/oubyt-logo.webp" type="image/webp" />
+        <link rel="icon" href="/assets/brand/oubyt-logo-transparent.webp" type="image/webp" />
         <title>Start a project — Oubyt</title>
         <meta name="description" content="Tell Oubyt about your animation project, from the first idea through delivery." />
         <meta name="robots" content="index,follow" />

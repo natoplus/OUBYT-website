@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import { familyLinks, NARTSTUDIO_URL, PYLOTHOUSE_URL, socialLinks } from '@/lib/site'
 
 const navigation = [
-  { label: 'Worlds', href: '/#worlds' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Process', href: '/#process' },
-  { label: 'Studio', href: '/#studio' },
+  { label: 'Services', href: '/services' },
+  { label: 'Worlds', href: '/worlds' },
+  { label: 'Process', href: '/process' },
+  { label: 'Studio', href: '/studio' },
 ]
 
 export function BrandSwitcher() {
@@ -26,6 +27,7 @@ export function BrandSwitcher() {
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [compact, setCompact] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const updateCompact = () => setCompact(window.scrollY > 24)
@@ -41,23 +43,31 @@ export function SiteHeader() {
         <BrandSwitcher />
         <div className="site-container header-inner">
           <Link className="site-logo" href="/" aria-label="Oubyt home">
-            <img src="/assets/brand/oubyt-logo.webp" alt="" width="96" height="66" />
+            <img src="/assets/brand/oubyt-logo-transparent.webp" alt="" width="96" height="66" />
             <span>ANIMATION STUDIO</span>
           </Link>
           <button
-            className="menu-toggle"
+            className={`menu-toggle${menuOpen ? ' is-open' : ''}`}
             type="button"
             aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={menuOpen}
             aria-controls="primary-navigation"
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span />
-            <span />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
           </button>
           <nav id="primary-navigation" className={`primary-navigation${menuOpen ? ' is-open' : ''}`} aria-label="Main navigation">
             {navigation.map((item) => (
-              <a href={item.href} key={item.label} onClick={() => setMenuOpen(false)}>{item.label}</a>
+              <Link
+                href={item.href}
+                key={item.label}
+                aria-current={router.pathname === item.href ? 'page' : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
             ))}
             <Link className="button button-small button-accent nav-cta" href="/start-a-project" onClick={() => setMenuOpen(false)}>
               Start a project <span aria-hidden="true">↗</span>
@@ -75,7 +85,7 @@ export function SiteFooter() {
       <div className="site-container footer-main">
         <div className="footer-brand">
           <Link className="site-logo footer-logo" href="/" aria-label="Oubyt home">
-            <img src="/assets/brand/oubyt-logo.webp" alt="" width="96" height="66" />
+            <img src="/assets/brand/oubyt-logo-transparent.webp" alt="" width="96" height="66" />
             <span>ANIMATION STUDIO</span>
           </Link>
           <p>Original worlds, shaped for motion. Oubyt is the animation studio in the Nartstudio family.</p>
@@ -87,9 +97,10 @@ export function SiteFooter() {
         </div>
         <div className="footer-column">
           <h2>Explore</h2>
-          <a href="/#worlds">Story worlds</a>
-          <a href="/#services">Services</a>
-          <a href="/#process">Our process</a>
+          <Link href="/worlds">Story worlds</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/process">Our process</Link>
+          <Link href="/studio">The studio</Link>
           <Link href="/start-a-project">Start a project</Link>
         </div>
         <div className="footer-column">

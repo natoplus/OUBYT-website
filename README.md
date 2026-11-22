@@ -1,6 +1,17 @@
 # Oubyt
 
-A cinematic landing site for Oubyt, the animation studio in the Nartstudio family. The launch build follows Stage A of the site plan: a focused, anchored landing page plus a separate detailed project brief. It does not invent a showreel or client credits; the supplied artwork is presented as original story-world art.
+A cinematic multi-page site for Oubyt, the animation studio in the Nartstudio family. The longer landing page is supported by dedicated Services, Worlds, Process, Studio and project-brief pages. It does not invent a showreel or client credits; the supplied artwork is presented as original story-world art.
+
+Scroll reveals and image transitions respect the visitor's reduced-motion preference. The site uses a transparent WebP Oubyt mark for the header, footer and favicon, while the original logo artwork is featured in the home-page Studio section.
+
+## Pages
+
+- `/` — Studio overview, capabilities, story worlds and project enquiry.
+- `/services` — Animation capabilities and service enquiries.
+- `/worlds` — Original NCU story-world gallery.
+- `/process` — Project stages and collaboration approach.
+- `/studio` — Oubyt and the Nartstudio creative family.
+- `/start-a-project` — Detailed project brief.
 
 ## Run locally
 
