@@ -1,5 +1,6 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/+$/, '')
 export const NARTSTUDIO_URL = 'https://nartstudio.vercel.app'
+export const NCU_URL = 'https://ncunartstudio.vercel.app'
 export const PYLOTHOUSE_URL = 'https://pylothouse.vercel.app'
 
 export const services = [
@@ -109,7 +110,7 @@ export const processSteps = [
 
 export const familyLinks = [
   { name: 'Nartstudio', href: NARTSTUDIO_URL },
-  { name: 'NCU', href: `${NARTSTUDIO_URL}/brands/ncu` },
+  { name: 'NCU', href: NCU_URL },
   { name: 'Pylothouse', href: PYLOTHOUSE_URL },
 ]
 
