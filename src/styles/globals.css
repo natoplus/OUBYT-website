@@ -2887,6 +2887,31 @@ html[data-scroll-reveal="active"] .scroll-reveal-item.scroll-reveal-visible img 
   }
 }
 
+@media (max-width: 420px) {
+  .page-hero-copy h1,
+  .project-page-heading h1,
+  .not-found-content h1 {
+    font-size: clamp(2.2rem, 9vw, 3.1rem);
+  }
+
+  .point-of-view-copy h2,
+  .section-heading h2,
+  .studio-copy h2,
+  .project-copy h2,
+  .newsletter-layout h2,
+  .world-feature-copy h2,
+  .service-approach-layout h2,
+  .process-standards-layout h2,
+  .studio-story-layout h2,
+  .page-cta-panel h2 {
+    font-size: clamp(1.8rem, 7.2vw, 2.5rem);
+  }
+
+  .brief-step-content h2 {
+    font-size: clamp(1.6rem, 6.5vw, 2.3rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html[data-scroll-reveal="active"] .scroll-reveal-item,
   html[data-scroll-reveal="active"] .scroll-reveal-item img {
