@@ -2,7 +2,7 @@
 
 A cinematic multi-page site for Oubyt, the animation studio in the Nartstudio family. The longer landing page is supported by dedicated Services, Worlds, Process, Studio and project-brief pages. It does not invent a showreel or client credits; the supplied artwork is presented as original story-world art.
 
-Scroll reveals and image transitions respect the visitor's reduced-motion preference. The site uses a transparent WebP Oubyt mark for the header, footer and favicon, while the original logo artwork is featured in the home-page Studio section.
+The homepage title has a short typing intro; scroll reveals and image transitions respect the visitor's reduced-motion preference. The site uses a transparent WebP Oubyt mark for the header, footer and favicon, while the original logo artwork is featured in the home-page Studio section.
 
 ## Pages
 

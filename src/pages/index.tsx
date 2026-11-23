@@ -29,7 +29,11 @@ export default function HomePage() {
           <div className="site-container hero-layout">
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-line" /> ANIMATION STUDIO · NARTSTUDIO FAMILY</p>
-              <h1>WORLDS<br /><span>IN MOTION.</span></h1>
+              <h1 aria-label="WORLDS IN MOTION.">
+                <span className="hero-title-line hero-title-line-primary" aria-hidden="true">WORLDS</span>
+                <br aria-hidden="true" />
+                <span className="hero-title-line hero-title-line-accent" aria-hidden="true">IN MOTION.</span>
+              </h1>
               <p className="hero-lede">We shape original worlds into visual stories—through considered 2D and 3D animation.</p>
               <div className="hero-actions">
                 <a className="button button-outline" href="#worlds">Explore story worlds <span aria-hidden="true">↓</span></a>
